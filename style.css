@@ -1,0 +1,145 @@
+/*
+Theme Name: techhub
+Author: Jonas Foldager
+Description: Eksamensprojekt 2. semester MMD Esbjerg
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+
+
+/*
+front page
+*/
+body{
+    background-color: #EBDCB1;
+}
+
+.fontpageimg{
+display: flex;
+width: 100vw;
+justify-content: end;
+}
+
+#background_img_frontpage{
+width: 100vw;
+height: 100vh;
+object-fit: cover;
+clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 89%);
+position: absolute;
+}
+
+.coverbox{
+    width: 40vw;
+    height: 100vh;  
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95.6%);
+    background-color: rgba(23, 72, 50, 0.6);
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.info_frontpage{
+    color: #EBDCB1;
+    width: 30vw;
+    font-size: 2.7rem;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.info_span_front_page{
+    background-color: #174832;
+    font-weight: bold;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.bottum_to_newsletter{
+    background-color: #EA581D;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #EBDCB1;
+    font-size: x-large;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.mail{
+  
+    height: 100vh;
+    background-color: #EBDCB1;
+    clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 100%);
+    transform: translateY(-16%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mail_headline{
+    width: 80vw;
+    font-family: 'Rajdhani', sans-serif;
+    color: #174832;
+    font-size: 2.3rem;
+    padding-top: 10rem;
+    display: flex;
+    justify-content: center;
+}
+
+.mail_description{
+    width: 70vw;
+    font-family: 'Rajdhani', sans-serif;
+    color: #174832;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.wpcf7-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-top: 2rem;
+}
+
+
+input, optgroup, select, textarea{
+    font-family: 'Rajdhani', sans-serif !important;
+    border-radius: 10px !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.5rem !important;
+}
+
+.wpcf7-submit{
+    background-color: #EA581D;
+    color: #EBDCB1;
+    border: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.wpcf7-validates-as-email{
+    color: #174832;
+    border: none;
+}
+
+.wpcf7-validates-as-required{
+    color: #174832;
+    border: none;
+}
+
+.wpcf7-spinner {
+    display: block;
+}
+
+.wpcf7 label {
+    color: #174832;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
