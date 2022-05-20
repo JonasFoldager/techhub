@@ -7,7 +7,9 @@ Description: Eksamensprojekt 2. semester MMD Esbjerg
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 
 
-
+.fontpageimg{
+    background-color: #EBDCB1;
+}
 /*
 front page
 */
@@ -27,6 +29,7 @@ height: 100vh;
 object-fit: cover;
 clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 89%);
 position: absolute;
+background-color: #EBDCB1;
 }
 
 .coverbox{
@@ -49,7 +52,7 @@ position: absolute;
 
 .info_span_front_page{
     background-color: #174832;
-    font-weight: bold;
+    font-weight: bolder;
     font-family: 'Rajdhani', sans-serif;
 }
 
@@ -66,12 +69,14 @@ position: absolute;
     font-family: 'Rajdhani', sans-serif;
 }
 
-.mail{
+.bottum_to_newsletter:hover{
+    color: #EBDCB1 !important;
+}
+
+#mail{
   
-    height: 100vh;
+    height: auto;
     background-color: #EBDCB1;
-    clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 100%);
-    transform: translateY(-16%);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -82,7 +87,6 @@ position: absolute;
     font-family: 'Rajdhani', sans-serif;
     color: #174832;
     font-size: 2.3rem;
-    padding-top: 10rem;
     display: flex;
     justify-content: center;
 }
@@ -134,7 +138,7 @@ input, optgroup, select, textarea{
 }
 
 .wpcf7-spinner {
-    display: block;
+    display: none;
 }
 
 .wpcf7 label {
@@ -142,4 +146,78 @@ input, optgroup, select, textarea{
     font-family: 'Rajdhani', sans-serif;
     font-size: 1.25rem;
     font-weight: bold;
+}
+
+.wpcf7-response-output{
+ border: 2px solid #EA581D !important;
+ border-radius: 10px;
+ color: #174832;
+}
+
+.wpcf7-not-valid-tip{
+    color: #EA581D;
+}
+
+
+.wpcf7-text:focus, .wpcf7-textarea:focus {
+    outline: none;
+    border: 2px solid #EA581D;
+    }
+
+.citat{
+    height: auto;
+    background-color: #EBDCB1;
+    display: flex;
+    color: #174832;
+    font-family: 'Rajdhani', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+}
+
+
+.citat_headline{
+    font-size: 3rem;
+    height: 5rem;
+    color: #174832;
+}
+.citat_texst{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80vw;
+    gap: 4rem;
+
+}
+.citat_box{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    width: 50vw;
+}
+
+.citat_marker{
+    width: 4rem;
+    padding-bottom: 1rem;
+}
+.the_title{
+font-size: 1.5rem;
+}
+
+.name{
+padding-top: 1rem;
+font-weight: bolder;
+font-size: 1.3rem;
+}
+
+.titel{
+    padding-top: 1rem;
+    font-size: 1.3rem;
+}
+
+.company{
+    padding-top: 1rem;
+    font-size: 1.3rem;
 }

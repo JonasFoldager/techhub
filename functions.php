@@ -5,3 +5,5 @@ function hotelcms_register_css() {
     wp_enqueue_script("bootstrap-js", "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js", null, null, true);
 }
 add_action("wp_enqueue_scripts", "hotelcms_register_css");
+
+
