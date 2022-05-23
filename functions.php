@@ -6,4 +6,7 @@ function hotelcms_register_css() {
 }
 add_action("wp_enqueue_scripts", "hotelcms_register_css");
 
-
+function hotelcms_register_menu() {
+    register_nav_menu("techhub_green", "techhub_reen");
+}
+add_action("after_setup_theme", "hotelcms_register_menu");

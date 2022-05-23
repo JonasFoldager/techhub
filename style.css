@@ -4,15 +4,47 @@ Author: Jonas Foldager
 Description: Eksamensprojekt 2. semester MMD Esbjerg
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0%;
+}
 
+/*
+Header style
+*/
+
+
+#menu-techhub_green{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 40vw;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    z-index: 999;
+
+}
+
+.menu-item a{
+    color: #EA581D;
+    text-decoration: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.menu-item a:hover{
+    color: #EA581D;
+}
+
+/*
+---------- front page ----------
+*/
 
 .fontpageimg{
     background-color: #EBDCB1;
 }
-/*
-front page
-*/
+
 body{
     background-color: #EBDCB1;
 }
@@ -21,6 +53,32 @@ body{
 display: flex;
 width: 100vw;
 justify-content: end;
+}
+
+.logo_box{
+    width: 100vw;
+    height: 10rem;
+    display: flex;
+    margin-top: 1rem;
+    position: absolute;
+}
+
+.logo{
+    width: 60vw;
+    padding-left: 1rem;
+}
+
+.menu{
+    width: 40vw;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+#logo-front-page{
+    width: 9rem;
+    height: 9rem;
+    position: absolute;
+    z-index: 1;
 }
 
 #background_img_frontpage{
@@ -172,7 +230,7 @@ input, optgroup, select, textarea{
     font-family: 'Rajdhani', sans-serif;
     flex-direction: column;
     align-items: center;
-    padding-top: 10rem;
+    padding-top: 8rem;
     padding-bottom: 5rem;
 }
 
@@ -186,16 +244,15 @@ input, optgroup, select, textarea{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     width: 80vw;
-    gap: 4rem;
+    gap: 7rem;
 
 }
 .citat_box{
     display: flex;
     flex-direction: column;
     padding-top: 2rem;
-    width: 50vw;
+    width: 80vw;
 }
 
 .citat_marker{
@@ -220,4 +277,131 @@ font-size: 1.3rem;
 .company{
     padding-top: 1rem;
     font-size: 1.3rem;
+}
+
+.partner{
+    height: auto;
+    background-color: #EBDCB1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loop {
+    height: auto;
+    background-color: #EBDCB1;
+    display: flex;
+    flex-direction: row;
+   flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+    width: 90vw;
+
+
+}
+
+.partner_list{
+
+    padding-top:1rem;
+    z-index: 1;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.partner_list img {
+    width: 15rem;
+    height: auto;
+    object-fit: fill;
+
+}
+
+
+.partner_headline{
+    font-size: 3rem;
+    height: 5rem;
+    color: #174832;
+    width: 100%;
+    text-align: center;
+    
+}
+
+
+
+/*
+---------- event page ----------
+*/
+
+.eventbackground {
+    background-color: #174832;
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eventsections{
+background-color: #174832;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+
+.textarea {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18vh;
+    font-family: 'Rajdhani', sans-serif;
+
+}
+
+.eventheader{
+    color: #EBDCB1;
+
+}
+
+.eventtext {
+    color: #EBDCB1;
+    padding-top: 2rem;
+
+}
+
+#eventpictures {
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+    object-position: 80% 60%;
+}
+
+#eventpictures.odd {
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+}
+
+#eventpictures.even {
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+
+
+}
+
+.events_title{
+    color: #EBDCB1;
+    position: absolute;
+    z-index: 999;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: 600;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #174832;
 }
