@@ -3,8 +3,8 @@
 <div class="fontpageimg">
             <div class="logo_box">
                 <div class="logo">
-                    <a href="index.php">
-                            <img id="logo-front-page" src="<?php the_field("logo")?>" alt="">
+                    <a href="/index.php ">
+                            <img id="logo-front-page" src="<?php the_field("logo_event")?>" alt="">
                         </a>
                 </div>
                 <div class="menu">
@@ -17,7 +17,7 @@
                  <div class="textarea">
                     <h1 class="eventheader"><?php the_field("eventheader") ?></h1>
                     <p class="eventtext"><?php the_field("eventtext") ?></p>
-                    <p class="eventtext"><?php the_field("eventfree") ?></p>
+                    <a id="ticektbox" href="https://www.eventbrite.com/o/techhub-syd-26210215133">find your tickets to the next event here</a>
                 </div>
              </div>
 

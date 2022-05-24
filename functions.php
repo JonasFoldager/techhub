@@ -10,3 +10,13 @@ function hotelcms_register_menu() {
     register_nav_menu("techhub_green", "techhub_reen");
 }
 add_action("after_setup_theme", "hotelcms_register_menu");
+
+
+function innocloud_setup_custom_logo() {
+    $config = array(
+        "height" => 220,
+        "width" => 220
+    );
+    add_theme_support("custom-logo", $config);
+}
+add_action("after_setup_theme", "innocloud_setup_custom_logo");

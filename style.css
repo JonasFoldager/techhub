@@ -165,7 +165,7 @@ background-color: #EBDCB1;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    margin-top: 2rem;
+    padding-top: 2rem;
 }
 
 
@@ -374,6 +374,24 @@ justify-content: center;
 
 }
 
+#ticektbox{
+    color: #EBDCB1;
+    background-color: #EA581D;
+    border-radius: 10px;
+    padding: 0.5rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: large;
+    border: 2px solid #174832;
+}
+
+
+
+#ticektbox:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 #eventpictures {
     width: 100vw;
     height: 50vh;
@@ -400,8 +418,131 @@ justify-content: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: xx-large;
+    font-size: 3rem;
     font-weight: 600;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #174832;
+}
+
+
+
+/*
+---------- startups page ----------
+*/
+
+
+
+#pageimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    background-size: cover;
+    
+}
+
+.headline1{
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    color: #174832;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+}
+
+.headline2{
+    padding-top: 1rem;
+    width: 60vw;
+    text-align: center;
+    color: #174832;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.sign_up_startups{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    background-color: #EA581D;
+    color: #EBDCB1;
+    font-family: 'Rajdhani', sans-serif;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.sign_up_startups:hover{
+    color: #EBDCB1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.startupheader {
+    text-align: center;
+    color:#174832;
+    margin:0;
+
+}
+
+
+.startup_mail{
+    background-color: #EBDCB1;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 5rem;
+    padding-top: 3rem;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
+
+}
+
+.startup_section{
+    background-color: #EBDCB1;
+
+
+}
+
+.boxaroundinfo {
+    background-color: #EBDCB1;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.info_box_startup{
+    background-color: #174832;
+    width: 100vw;
+    height: 60vh;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+    padding-top: 4rem;
+}
+
+.startupbio {
+    color: #EBDCB1;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2rem;
+    padding-top: 2.5rem;
+    margin-left: 4rem;
+}
+
+.techstartupheader {
+    color: #174832;
+    text-align: center;
+    margin:0;
+}
+
+.mailbox {
+    background-color: #174832;
+    border: none;
+}
+
+
+
+/*
+---------- startups page ----------
+*/
+
+.custom-logo{
+    z-index: 999;
+}
+.menubar {
+    position: absolute;
 }
