@@ -2,7 +2,9 @@
 Theme Name: techhub
 Author: Jonas Foldager
 Description: Eksamensprojekt 2. semester MMD Esbjerg
+version: 1.1
 */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 *{
@@ -537,12 +539,79 @@ justify-content: center;
 
 
 /*
----------- startups page ----------
+---------- about page ----------
 */
 
-.custom-logo{
-    z-index: 999;
+#aboutimg {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    z-index: -10;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
 }
-.menubar {
-    position: absolute;
+
+.aboutcoverbox {
+    width: 30vw;
+    height: 100vh;  
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95.6%);
+    background-color: rgba(23, 72, 50, 0.6);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 10rem;
+}
+
+
+.whoarewe {
+    color: #EBDCB1;
+
+}
+
+.whatwedo {
+    color: #EBDCB1;
+    z-index: 100;
+}
+
+.about_info_box_startup {
+    display: flex;
+    background-color: #174832;
+    width: 100vw;
+    height: 60vh;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+    padding-top: 4rem;
+    color: #EBDCB1;
+    
+}
+
+.keywordbox {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:4rem;
+}
+
+.aboutinfotext {
+    line-height: 2rem;
+    padding-bottom: 5rem;
+    padding-left: 3rem;
+}
+
+.keyword {
+    width: 14vw;
+    height: 12vh;
+    background-color: #174832;
+    border: 2px solid #EA581D;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 1.5rem;
+
 }
