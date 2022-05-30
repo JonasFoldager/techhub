@@ -1,16 +1,16 @@
 <?php get_header()?>
+<div class="logo_and_menu">
+        <div class="logo_box">
+            <a href="<?php echo site_url()?>">
+            <img class="logo" src="<?php the_field("logo-startup")?>" alt="">
+            </a>
+        </div>
 
-    
-<div class="menubar">
-<div class="logo_box">
-                <div class="logo">
-                        <div class="logo_custom"><?php the_custom_logo("")?></div>
-                </div>
-                <div class="menu">
-                    <?php wp_nav_menu(array("theme_location" => "techhub_green")) ?>
-                </div>
-             </div>   
-</div>
+        <div class="menu">
+          <?php wp_nav_menu(array("theme_location" => "techhub_green")) ?>
+        </div>
+    </div>
+
     <div style="background-color: #EBDCB1">
     <div id="pageimg" style="background-image: url(<?php the_field("frontpage_img") ?>); clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 89%);">
    
@@ -42,8 +42,6 @@
         <?php echo apply_shortcodes( '[contact-form-7 id="125" title="startups contact form"]' ); ?>
     </div>
 </div>
-
-
 
 
 

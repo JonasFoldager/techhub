@@ -1,17 +1,18 @@
 <?php get_header()?>
 
 <body>
+    <div class="logo_and_menu">
+        <div class="logo_box">
+            <a href="<?php echo site_url()?>">
+            <img class="logo" src="<?php the_field("logo")?>" alt="">
+            </a>
+        </div>
+
+        <div class="menu">
+          <?php wp_nav_menu(array("theme_location" => "techhub_green")) ?>
+        </div>
+    </div>
         <div class="fontpageimg">
-            <div class="logo_box">
-                <div class="logo">
-                    <a href="#index">
-                        <img id="logo-front-page" src="<?php the_field("logo")?>" alt="">
-                    </a>
-                </div>
-                <div class="menu">
-                    <?php wp_nav_menu(array("theme_location" => "techhub_green")) ?>
-                </div>
-             </div>
              <img id="background_img_frontpage" src="<?php the_field("background_img_frontpage") ?>" alt="">
              <div class="coverbox">
                  <!-- Vi har valgt at kode deres tagline fordi designet vil krave at kunden skal skrive information ind i 3 custom fields og det vil ikke være optimalt -->
@@ -72,8 +73,38 @@
                 </div>     
             </div>
 
+    <div class="footer_background">
+        <div class="footer_green">
 
+        <div class="footermenu">
+          <?php wp_nav_menu(array("theme_location" => "footermenu")) ?>
+        </div>
+            
 
-</body>
+            <div class="footer">
+                <div class="lnbox">
+                    <img id="lnlogo" src="<?php the_field("baseln") ?>" alt="">
+                    <div class="lnmail"><?php the_field("kaspermailbase") ?></div>
+                </div>
+                <div class="lnbox">
+                    <img id="lnlogo" src="<?php the_field("baseln") ?>" alt="">
+                    <div class="lnmail"><?php the_field("trinemailbase") ?></div>
+                </div>
+                <div class="lnbox">
+                    <img id="lnlogo" src="<?php the_field("baseln") ?>" alt="">
+                    <div class="lnmail"><?php the_field("ronnimailbase") ?></div>
+                </div>
+
+            </div> 
+
+            
+        </div>
+        <div class="copyright">
+                <p class="copyright">
+                    Copyright 2019 - TECHHUB SYD 
+                    <br> 
+                    By signing up to our community and newsletter you agree to receive updates on TECHHUB SYD events and news about relevant tech in the region.</p>
+            </div>
+    </div>
 
 <?php get_footer()?>

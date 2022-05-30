@@ -11,12 +11,10 @@ function hotelcms_register_menu() {
 }
 add_action("after_setup_theme", "hotelcms_register_menu");
 
-
-function innocloud_setup_custom_logo() {
-    $config = array(
-        "height" => 220,
-        "width" => 220
-    );
-    add_theme_support("custom-logo", $config);
+function footermenu_register_menu() {
+    register_nav_menu("footermenu", "footermenu");
 }
-add_action("after_setup_theme", "innocloud_setup_custom_logo");
+add_action("after_setup_theme", "footermenu_register_menu");
+
+
+

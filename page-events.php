@@ -1,23 +1,22 @@
 <?php get_header()?>
 
-<div class="fontpageimg">
-            <div class="logo_box">
-                <div class="logo">
-                    <a href="/index.php ">
-                            <img id="logo-front-page" src="<?php the_field("logo_event")?>" alt="">
-                        </a>
-                </div>
-                <div class="menu">
-                    <?php wp_nav_menu(array("theme_location" => "techhub_green")) ?>
-                </div>
-             </div>
-</div>
+<div class="logo_and_menu">
+        <div class="logo_box">
+            <a href="<?php echo site_url()?>">
+            <img class="logo" src="<?php the_field("logo_event")?>" alt="">
+            </a>
+        </div>
+
+        <div class="menu">
+          <?php wp_nav_menu(array("theme_location" => "techhub_green")) ?>
+        </div>
+    </div>
 
              <div class="eventbackground">
                  <div class="textarea">
                     <h1 class="eventheader"><?php the_field("eventheader") ?></h1>
                     <p class="eventtext"><?php the_field("eventtext") ?></p>
-                    <a id="ticektbox" href="https://www.eventbrite.com/o/techhub-syd-26210215133">find your tickets to the next event here</a>
+                    <a id="ticektbox" href="https://www.eventbrite.com/o/techhub-syd-26210215133">Find tickets</a>
                 </div>
              </div>
 
