@@ -1,110 +1,148 @@
-<?php get_header()?>
+<?php get_header() ?>
 
 <div class="logo_and_menu">
-        <div class="logo_box">
-            <a href="<?php echo site_url()?>">
-            <img class="logo" src="<?php the_field("logo-about")?>" alt="">
-            </a>
-        </div>
-
-        <div class="menu">
-          <?php wp_nav_menu(array("theme_location" => "techhub_green")) ?>
-        </div>
+    <div class="logo_box">
+        <a href="<?php echo site_url() ?>">
+            <img class="logo" src="<?php the_field("logo-about") ?>" alt="">
+        </a>
     </div>
 
-<div style="background-color: #EBDCB1">
-    <div id="aboutimg" style="background-image: url(<?php the_field("toppicture") ?>); clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 89%);">
-   
-    <div class="aboutcoverbox">
-            <h1 class="whoarewe"><?php the_field("whoarewe")?></h1>
-            <h1 class="whatwedo"><?php the_field("whatwedo")?></h1>
-    </div>
-            
+    <div class="menu">
+        <?php wp_nav_menu(array("theme_location" => "techhub_green")) ?>
     </div>
 </div>
 
-    <div class="startup_section">
-        <h1 class="startupheader"><?php the_field("aboutheader")?></h1>
-    </div>
-    <div class="boxaroundinfo">
-        <div class="about_info_box_startup">
-            <div class="keywords-1">
-                    <div class="keywordbox-text">
-                        <p class="aboutinfotext"><?php the_field("aboutinfo")?></p>
-                    </div>
+<div style="background-color: #EBDCB1">
+    <div id="aboutimg" style="background-image: url(<?php the_field("toppicture") ?>); clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 89%);">
 
-                    <div class="keywordbox-words">
-                        <div class="keyword"><?php the_field("keyword1")?></div>
-                        <div class="keyword"><?php the_field("keyword2")?></div>
-                    </div>  
-                </div>    
+        <div class="aboutcoverbox">
+            <h1 class="whoarewe"><?php the_field("whoarewe") ?></h1>
+            <h1 class="whatwedo"><?php the_field("whatwedo") ?></h1>
+        </div>
+
+    </div>
+</div>
+
+<div class="startup_section">
+    <h1 class="startupheader"><?php the_field("aboutheader") ?></h1>
+</div>
+<div class="boxaroundinfo">
+    <div class="about_info_box_startup">
+        <div class="keywords-1">
+            <div class="keywordbox-text">
+                <p class="aboutinfotext"><?php the_field("aboutinfo") ?></p>
+            </div>
+
+            <div class="keywordbox-words">
+                <div class="keyword"><?php the_field("keyword1") ?></div>
+                <div class="keyword"><?php the_field("keyword2") ?></div>
+            </div>
+        </div>
     </div>
 
-    <h1 class="startupheadermission"><?php the_field("missionheader")?></h1>
+    <h1 class="startupheadermission"><?php the_field("missionheader") ?></h1>
 
 
 
     <div>
         <?php
-            $loop = new WP_Query( array(
-                    'post_type' => 'about',
-                    'posts_per_page' => -1
-                )
-                );
-                ?>
+        $loop = new WP_Query(
+            array(
+                'post_type' => 'about',
+                'posts_per_page' => -1
+            )
+        );
+        ?>
 
 
-                <?php $i = 0 ?>
-                    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                <?php $class = ($i % 2 == 0) ? "odd" : "even" ?>
-                    <div class="missioninfo <?php echo $class?>">
+        <?php $i = 0 ?>
+        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+            <?php $class = ($i % 2 == 0) ? "odd" : "even" ?>
+            <div class="missioninfo <?php echo $class ?>">
 
-                        <div class="abouttitlebox">
-                            <div class="missiontitle"><?php the_title() ?></div>
-                        </div>
+                <div class="abouttitlebox">
+                    <div class="missiontitle"><?php the_title() ?></div>
+                </div>
 
-                        <div class="aboutimagebox">
-                            <img id="missionpicture" src="<?php the_field("missionimage") ?>" alt="">
-                        </div>
+                <div class="aboutimagebox">
+                    <img id="missionpicture" src="<?php the_field("missionimage") ?>" alt="">
+                </div>
 
-                    </div>
-                    <?php $i++ ?>
-                <?php endwhile; wp_reset_query(); ?>
+            </div>
+            <?php $i++ ?>
+        <?php endwhile;
+        wp_reset_query(); ?>
 
 
         <div class="whatwedobox">
-            <h1 class="whatwedoheader"><?php the_field("whatwedoheader")?></h1>
+            <h1 class="whatwedoheader"><?php the_field("whatwedoheader") ?></h1>
 
             <?php
-            $loop = new WP_Query( array(
+            $loop = new WP_Query(
+                array(
                     'post_type' => 'whatwedo',
                     'posts_per_page' => -1
                 )
-                );
-                ?>
+            );
+            ?>
 
 
-                <?php $i = 0 ?>
-                    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+            <?php $i = 0 ?>
+            <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                 <?php $class = ($i % 2 == 0) ? "odd" : "even" ?>
-                    <div class="whatwedocpt ">
-
-                    <div class="infoarea <?php echo $class?>">
+                <div class="whatwedocpt ">
+                    <div class="infoarea <?php echo $class ?>">
                         <div class="titelandinfo">
                             <div class="whatwedotitle"><?php the_title() ?></div>
-                            <div class="whatwedoinfo"><?php the_field("whatwedoinfo") ?></div> 
-                        </div> 
+                            <div class="whatwedoinfo"><?php the_field("whatwedoinfo") ?></div>
+                        </div>
                         <div class="whatimagebox">
                             <img id="whatwedopicture" src="<?php the_field("whatwedoimage") ?>" alt="">
                         </div>
                     </div>
+                </div>
+
+                <?php $i++ ?>
+            <?php endwhile;
+            wp_reset_query(); ?>
+        </div>
+
+
+        <div class="footer_backgroundbase">
+        <div class="footer_greenbase">
+
+        <div class="footermenubase">
+          <?php wp_nav_menu(array("theme_location" => "footermenu")) ?>
+        </div>
+            
                     
-                    <?php $i++ ?>
-                <?php endwhile; wp_reset_query(); ?>
+            <div class="footerbase">
+                <div class="lnboxbase">
+                <a href="https://www.linkedin.com/in/kasperthom/" target="blank"><img id="lnlogobase" src="<?php the_field("grønln") ?>" alt=""></a>
+                    <div class="lnmailbase"><?php the_field("kaspermailgrøn") ?></div>
+                </div>
+                <div class="lnboxbase">
+                <a href="https://www.linkedin.com/in/trinefalbe/" target="blank"><img id="lnlogobase" src="<?php the_field("grønln") ?>" alt=""></a>
+                    <div class="lnmailbase"><?php the_field("trinemailgron") ?></div>
+                </div>
+                <div class="lnboxbase">
+                <a href="https://www.linkedin.com/in/ronni-baslund/" target="blank"><img id="lnlogobase" src="<?php the_field("grønln") ?>" alt=""></a>
+                    <div class="lnmailbase"><?php the_field("ronnimailgron") ?></div>
+                </div>
 
-        
 
 
-<?php get_footer()?>
+            </div> 
+
+            
+        </div>
+        <div class="copyrightbase">
+                <p class="copyrightbase">
+                    Copyright 2019 - TECHHUB SYD 
+                    <br> 
+                    By signing up to our community and newsletter you agree to receive updates on TECHHUB SYD events and news about relevant tech in the region.</p>
+            </div>
+    </div>
 
 
+        <?php get_footer() ?>

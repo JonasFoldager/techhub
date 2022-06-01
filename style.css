@@ -40,7 +40,7 @@ Header style
 .menu{
     width: 50%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 
@@ -71,6 +71,7 @@ Header style
 ---------- front page ----------
 */
 
+
 .fontpageimg{
     background-color: #EBDCB1;
 }
@@ -82,7 +83,7 @@ body{
 .fontpageimg{
 display: flex;
 width: 100vw;
-justify-content: end;
+justify-content: flex-end;
 }
 
 
@@ -230,9 +231,13 @@ input, optgroup, select, textarea{
     border: 2px solid #EA581D;
     }
 
+
+.citat_background{
+    background-color: #EBDCB1;
+}
 .citat{
     height: auto;
-    background-color: #EBDCB1;
+    background-color: #174832;
     display: flex;
     color: #174832;
     font-family: 'Rajdhani', sans-serif;
@@ -240,14 +245,13 @@ input, optgroup, select, textarea{
     align-items: center;
     padding-top: 8rem;
     padding-bottom: 5rem;
-    
+    clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);    
 }
-
 
 .citat_headline{
     font-size: 3rem;
     height: 5rem;
-    color: #174832;
+    color: #EBDCB1;
 }
 
 .citat_texst{
@@ -256,23 +260,25 @@ input, optgroup, select, textarea{
     justify-content: center;
     width: 80vw;
     gap: 7rem;
-
+    color: #EBDCB1;
+    margin-top: 2rem;
 }
+
 .citat_box{
     display: flex;
     flex-direction: column;
     padding-top: 2rem;
     width: 80vw;
-    animation-name: slidein;
-    animation-duration: 1s;
+    padding-bottom: 4rem;
 }
 
 .citat_marker{
     width: 4rem;
     padding-bottom: 1rem;
 }
+
 .the_title{
-font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .name{
@@ -291,6 +297,10 @@ font-size: 1.3rem;
     font-size: 1.3rem;
 }
 
+.partnerbackground {
+    background-color: #174832;
+}
+
 .partner{
     height: auto;
     background-color: #EBDCB1;
@@ -298,6 +308,9 @@ font-size: 1.3rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 89%);
+    padding: 6rem;
+    transform: translateY(-1px); /* Denne linje er brugt fordi der er en linje på 1px vi ikke har ku fjerne på anden måde*/
 }
 
 .loop {
@@ -375,6 +388,12 @@ font-size: 1.3rem;
         
     }
 
+    .partner{
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 93%);
+        
+    
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -385,7 +404,7 @@ font-size: 1.3rem;
         padding-left:2%;
         padding-right: 6%;
         margin:0;
-        justify-content: end;
+        justify-content: flex-end;
         gap:3rem;
 
         
@@ -402,6 +421,16 @@ font-size: 1.3rem;
 
     }
 
+    .partner{
+       
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95%);
+        
+    
+    }
+
+    .partner_headline{
+        width: 90vw;
+    }
     .coverbox {
         width: 60vw;
         clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 93.4%);
@@ -416,14 +445,22 @@ font-size: 1.3rem;
 
     .citat_texst {
         flex-direction: column;
-        gap:4rem;
+        gap: 1rem;
+    }
+
+    .citat_box{
+        padding-top: 0rem;
     }
 
     .citat_headline{
         font-size: 2rem;
-        
+        margin-bottom: 0%;
+        height: 2rem;
     }
 
+    .company{
+        padding-bottom: 3rem;
+    }
     .the_title {
         font-size: 1.2rem;
     }
@@ -446,12 +483,6 @@ font-size: 1.3rem;
     
 }
 
-
-
-@keyframes slidein{
-    from{transform: translateX(-400px);}
-    to{transform: translateX(0);}
-}
 
 
 /*
@@ -533,7 +564,7 @@ font-size: 1.3rem;
 }
 
 .events_title{
-    color: #EBDCB1;
+    color: #EA581D;
     position: absolute;
     z-index: 999;
     width: 100vw;
@@ -543,11 +574,29 @@ font-size: 1.3rem;
     align-items: center;
     font-size: 3rem;
     font-weight: 600;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #174832;
     font-family: 'Rajdhani', sans-serif;
 
 }
+
+.events_title a{
+    color: #EA581D;
+    text-decoration: none;
+    transition: 0.3s;
+
+
+}
+
+.events_title a:hover{
+    font-size: 3.15rem;
+    color: #EA581D;
+    transition: 0.3s;
+}
+
+.lb-image{
+   border: 4px solid #EBDCB1 !important;
+}
+
+
 
 @media screen and (max-width: 775px) {
     .textarea {
@@ -556,8 +605,11 @@ font-size: 1.3rem;
 
     #ticektbox{
         
-        padding: 0.5rem 1rem 0,5rem 1rem;
-}
+        padding: 0.5rem 1rem 0,5rem 1rem;  
+    }
+    .loopevents{
+        transform: translateY(-1px);
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -572,11 +624,12 @@ font-size: 1.3rem;
     }
 
     #ticektbox{
-        
         padding: 0.5rem 1rem 0,5rem 1rem;
-       
+    }
 
-}
+    .loopevents{
+        transform: translateY(-1px);
+    }
 }
 
 /*
@@ -699,7 +752,7 @@ font-size: 1.3rem;
 
 }
 
-.mailbox {
+#mailbox {
     background-color: #174832;
     margin: 0%;
     padding: 0%;
@@ -708,6 +761,14 @@ font-size: 1.3rem;
 
 @media screen and (max-width: 775px) {
  
+
+    .home #menu-techhub_green {
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 1.2rem;
+        
+    }
+
     .headline1{
         width: 90vw;
         font-size: 1.4rem;
@@ -742,6 +803,10 @@ font-size: 1.3rem;
 
 @media screen and (max-width: 480px) {
 
+    .home #menu-techhub_green {
+        font-size: 1.2rem;
+        
+    }
     #menu-techhub_green{
         width: 50vw;
         gap: 2rem;
@@ -780,7 +845,7 @@ font-size: 1.3rem;
     z-index: -10;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
 
 }
 
@@ -790,7 +855,7 @@ font-size: 1.3rem;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95.6%);
     background-color: rgba(23, 72, 50, 0.6);
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     flex-direction: column;
     padding-bottom: 10rem;
@@ -823,8 +888,8 @@ font-size: 1.3rem;
     
 }
 .keywords-1{
-display: flex;
-width: 80vw;
+    display: flex;
+    width: 80vw;
 }
 
 .keywordbox-text {
@@ -848,7 +913,6 @@ width: 80vw;
 
 .aboutinfotext {
     line-height: 3rem;
-    
     font-family: 'Rajdhani', sans-serif;
 
 }
@@ -878,7 +942,7 @@ width: 80vw;
 }
 
 .missioninfo.even{
-flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 .infoarea.even{
@@ -977,18 +1041,188 @@ flex-direction: row-reverse;
     
 }
 
+
+@media screen and (max-width: 775px) {
+    
+    .logo {
+        width: 15vw;
+    }
+
+    #menu-techhub_green{ 
+        width: 60vw;
+     
+    }
+
+    .aboutcoverbox {
+        width: 40vw;
+    }
+
+   .aboutinfotext {
+       line-height: 2rem;
+   }
+
+    .keyword {
+        width: 17vw;
+    }
+    
+    .whatwedobox {
+        height:150vh ;
+    }
+
+    .whatwedoheader{
+        margin-top: 7rem;
+    }
+  
+
+    #whatwedopicture {
+        width: 40%;
+    }
+
+    #missionpicture {
+        width: 40%;
+    }
+
+    
+
+}
+
+@media screen and (max-width: 480px) {
+
+    #menu-techhub_green{ 
+        width: 60vw;
+        gap:1rem;
+    }
+    .logo {
+        width: 20vw;
+    }
+
+    .aboutcoverbox {
+        width: 50vw;
+    }
+
+    .keywordbox-text {
+        width: 100%;
+        padding-bottom: 3rem;
+    }
+
+    .aboutinfotext {
+        line-height: 1.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about_info_box_startup {
+        height: 80vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    .keywords-1 {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .keywordbox-words {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .keyword {
+        width: 40vw;
+        padding:1rem;
+    }
+
+    .missioninfo.even {
+        flex-direction: column;
+    }
+
+    .missioninfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+
+    .startupheadermission {
+        margin-bottom: 0;
+    }
+  
+
+    .abouttitlebox {
+        width: 80% !important;
+        justify-content: center;
+        align-items: center;
+
+        
+    }
+
+    .aboutimagebox{
+        padding-bottom: 2rem;
+    }
+
+    .missiontitle {
+        width: 100% !important;
+        margin-bottom: 1rem;
+    }
+
+    #missionpicture {
+        width: 70%;
+    }
+
+    .whatwedobox {
+        height: 210vh;
+        clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%) ;
+
+    }
+
+    #whatwedopicture {
+        width: 70%;
+    }
+
+    .infoarea {
+        flex-direction: column;
+    }
+
+    .infoarea.even {
+        flex-direction: column;
+    }
+
+    .titelandinfo {
+        width: 80%;
+    }
+
+    .whatwedotitle {
+        width: 100%;
+    }
+
+    .whatwedoinfo {
+        width: 100%;
+    }
+
+
+ 
+}
+
+
 /*
 footer style green
 */
 .footer_background{
-    background-color: #EBDCB1;
+    background-color: #174832;
     padding-top: 5rem;
 }
 
 .footer_green{
     background-color: #174832;
-    height: 40vh;
-    clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 35%, 100% 100%, 0 100%);
     display: flex;
     justify-content: center;
 
@@ -998,7 +1232,6 @@ footer style green
 .footer {
     width: 50%;
     display: flex;
-    align-items: center;
 }
 
 .footermenu{
@@ -1024,6 +1257,8 @@ footer style green
 .footermenu a:hover{
     color: #EBDCB1;
 }
+
+
 
 .lnbox {
     display: flex;
@@ -1055,4 +1290,137 @@ footer style green
 
 .copyright p{
     margin: 0% !important;
+}
+
+
+
+
+.footer_backgroundbase{
+    background-color: #EBDCB1;
+    padding-top: 5rem;
+}
+
+.footer_greenbase{
+    background-color: #EBDCB1;
+    clip-path: polygon(0 0, 100% 35%, 100% 100%, 0 100%);
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.footerbase {
+    width: 50%;
+    display: flex;
+}
+
+.footermenubase{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 30%;
+}
+
+.footermenubase ul{
+    list-style: none;
+    padding-top: 1rem;
+}
+
+.footermenubase a{
+    text-decoration: none;
+    color: #174832;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.footermenubase a:hover{
+    color: #174832;
+}
+
+
+
+.lnboxbase {
+    display: flex;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#lnlogobase {
+    margin-right: 1rem;
+    width: 3rem;    
+}
+
+.lnmailbase {
+    color: #174832;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    width: 9rem;
+}
+
+.copyrightbase {
+    text-align: center;
+    color: #174832;
+    font-family: 'Rajdhani', sans-serif;
+    background-color: #EBDCB1;
+    font-size: 12px;
+}
+
+.copyrightbase p{
+    margin: 0% !important;
+}
+
+
+
+
+
+
+@media screen and (max-width: 775px) {
+
+
+.footer_backgroundbase {
+    padding-top:0 !important;
+}
+
+.footer_background{
+    transform: translateY(-1px);
+}
+
+.footerbase {
+    flex-direction: column;
+    padding-top: 5rem;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.footermenubase {
+    width: 40% !important;
+}
+
+.footer_background {
+    padding-top:0 !important;
+}
+
+
+.footer {
+    flex-direction: column;
+    padding-top: 5rem;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.footermenu {
+    width: 40% !important;
+}
+
+}
+
+
+@media screen and (max-width: 480px) {
+    .footer_background{
+        transform: translateY(-2px);
+    }
+
 }

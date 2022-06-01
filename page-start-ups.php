@@ -16,7 +16,7 @@
    
         <h2 class="headline1"><?php the_field("start_ups_headline1")?></h2>
         <h3 class="headline2"><?php the_field("start_ups_headline2")?></h3>
-        <a class="sign_up_startups" href="">Sign up</a>
+        <a class="sign_up_startups" href="#mailbox">Sign up</a>
             
     </div>
     </div>
@@ -35,7 +35,7 @@
     
     </div>
 
-<div class="mailbox">
+<div id="mailbox">
     <div class="startup_mail">
         <h3 class="techstartupheader"><?php the_field("startups_mail_headline")?></p>
 
@@ -43,8 +43,46 @@
     </div>
 </div>
 
+<div class="footer_background">
+            <div class="footer_green">
 
+                <div class="footermenu">
+                    <?php wp_nav_menu(array("theme_location" => "footermenu")) ?>
+                </div>
+
+
+                <div class="footer">
+                    <div class="lnbox">
+                        <a href="https://www.linkedin.com/in/kasperthom/" target="blank"><img id="lnlogo" src="<?php the_field("baseln") ?>" alt=""></a>
+                        <div class="lnmail"><?php the_field("kaspermailbase") ?></div>
+                    </div>
+                    <div class="lnbox">
+                        <a href="https://www.linkedin.com/in/trinefalbe/" target="blank"><img id="lnlogo" src="<?php the_field("baseln") ?>" alt=""></a>
+                        <div class="lnmail"><?php the_field("trinemailbase") ?></div>
+                    </div>
+                    <div class="lnbox">
+                        <a href="https://www.linkedin.com/in/ronni-baslund/" target="blank"><img id="lnlogo" src="<?php the_field("baseln") ?>" alt=""></a>
+                        <div class="lnmail"><?php the_field("ronnimailbase") ?></div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="copyright">
+                <p class="copyright">
+                    Copyright 2019 - TECHHUB SYD
+                    <br>
+                    By signing up to our community and newsletter you agree to receive updates on TECHHUB SYD events and news about relevant tech in the region.
+                </p>
+            </div>
+        </div>
 
 
 
 <?php get_footer()?>
+
+
+
+
+ 
